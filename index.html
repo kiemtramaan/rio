@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIỂM TRA MÃ ẨN - XÓA MÃ ẨN</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div id="login-overlay">
+        <div class="login-box">
+            <h2>Đăng nhập</h2>
+            <div class="field">
+                <label for="login-user">Tên đăng nhập</label>
+                <input id="login-user" type="text" placeholder="Nhập tên đăng nhập">
+            </div>
+            <div class="field">
+                <label for="login-pass">Mật khẩu</label>
+                <div class="password-wrapper">
+                    <input id="login-pass" type="password" placeholder="Nhập mật khẩu">
+                    <span id="togglePass">👁️</span>
+                </div>
+            </div>
+            <button id="login-btn" disabled>Đăng nhập</button>
+            <div class="error-msg" id="login-error">Vui lòng điền đầy đủ thông tin</div>
+        </div>
+    </div>
+
+    <div class="terminal-window">
+        <div class="title-bar">
+            <div class="title">KIỂM TRA MÃ ẨN - XÓA MÃ ẨN</div>
+        </div>
+        <div class="tabs">
+            <span class="tab active" data-tab="tab1">Kiểm tra mã ẩn</span>
+            <span class="tab" data-tab="tab2">Xóa mã ẩn</span>
+            <span class="tab" data-tab="tab3">Kiểm tra cổng game</span>
+        </div>
+
+        <div class="tab-content active" id="tab1">
+            <div class="input-section">
+                <div class="input-row"><label for="phone">Số điện thoại_</label><input id="phone" type="text" /></div>
+                <div class="input-row"><label for="game-port">Cổng game_</label><input id="game-port" type="text" /></div>
+                <div class="input-row"><label for="game-account">Tài khoản game_</label><input id="game-account" type="text" /></div>
+                <button id="start-btn1" disabled>START</button>
+            </div>
+            <div class="output-section" id="output-section1"></div>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <div class="input-section">
+                <div class="input-row"><label for="del-phone">Số điện thoại_</label><input id="del-phone" type="text" /></div>
+                <div class="input-row"><label for="del-game-port">Cổng game_</label><input id="del-game-port" type="text" /></div>
+                <div class="input-row"><label for="del-game-account">Tài khoản game_</label><input id="del-game-account" type="text" /></div>
+                <button id="start-btn2" disabled>START</button>
+            </div>
+            <div class="output-section" id="output-section2"></div>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <div class="input-section">
+                <div class="input-row"><label for="check-port">Cổng game_</label><input id="check-port" type="text" /></div>
+                <button id="start-btn3" disabled>START</button>
+            </div>
+            <div class="output-section" id="output-section3"></div>
+        </div>
+
+        <div class="footer-text">
+            Developed by Rioads - Ha Noi team
+        </div>
+    </div>
+
+    <div id="audio-controls">
+        <audio id="background-music" loop volume="0.5">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="toggle-music-btn">Tắt nhạc</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
